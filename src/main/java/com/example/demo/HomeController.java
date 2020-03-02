@@ -18,6 +18,9 @@ public class HomeController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    UserRepository userRepository;
+
     @GetMapping("/register")
     public String showRegistrationPage(Model model) {
         model.addAttribute("user", new User());
@@ -45,9 +48,6 @@ public class HomeController {
     public String login() {
         return "login";
     }
-
-    @Autowired
-    UserRepository userRepository;
 
     @RequestMapping("/secure")
     public String secure(Principal principal, Model model) {
