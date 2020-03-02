@@ -23,6 +23,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     private SSUserDetailsService userDetailsService;
 
+
     @Autowired
     private UserRepository userRepository;
 
